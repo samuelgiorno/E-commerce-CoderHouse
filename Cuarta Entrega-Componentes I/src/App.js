@@ -7,7 +7,7 @@ const App = () => {
   return(
     <>
     <NavBar nombre={"Samuel"} edad={1}/>
-    <ItemListContainer greeting="Soy el contenedor"/>
+    <ItemListContainer greeting="Soy el Contenedor ItemListContainer"/>
     <main>Main de la web</main>
     </>
   )
