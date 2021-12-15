@@ -1,0 +1,33 @@
+#count{
+    margin-left: 1rem;
+}
+#mas,
+#menos{
+    border: none;
+    color: #ffffff;
+    background-color: #0D1D2D;
+    border: 1px solid #0D1D2D;
+}  
+#numero{
+    color: #0D1D2D;
+    background-color: #ffffff;
+    border: 1px solid #0D1D2D;
+}
+
+#agregar{
+    margin-left: 1rem;
+    color: #ffffff;
+    background-color: #0D1D2D;
+    border: 1px solid #0D1D2D;
+}
+
+#agregar:hover{
+    color: #0D1D2D;
+    background-color: #ffffff;
+    border: 1px solid #0D1D2D;
+}
+
+p{
+    margin-top: 1rem;
+    font-size: 15px;
+}
