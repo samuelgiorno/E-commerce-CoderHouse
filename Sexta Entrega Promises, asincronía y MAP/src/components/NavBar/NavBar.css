@@ -1,0 +1,60 @@
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+#nav {
+    padding: 0;
+    margin-right: 2rem;
+}
+
+#brand{
+    margin-left: 4rem;
+}
+
+#navbarScroll {
+    margin-left: 1rem;
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+#navbarScrollingDropdown{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em; 
+    margin-right: 2rem;
+}
+
+#link{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em;
+    margin-right: 2rem;
+}
+
+form{
+    margin-left: 10rem;
+    margin-right: 2rem;
+}
+
+h3{
+    font-size: calc(10px + 1vmin);
+}
+
+button{
+    color: #ffffff;
+    background-color: #0D1D2D;
+    border: 1px solid #0D1D2D;
+}
+button:hover{
+    color: #0D1D2D;
+    background-color: #ffffff;
+    border: 1px solid #0D1D2D;
+}

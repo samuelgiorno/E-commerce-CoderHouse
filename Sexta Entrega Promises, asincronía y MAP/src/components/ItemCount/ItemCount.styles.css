@@ -1,0 +1,27 @@
+.buttonContainer {
+    width: 10rem;
+    height: 3.5rem;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.buttonContainer button {
+    width: 30%;
+    height: 3.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color: blue;
+}
+
+.buttonContainer h4 {
+    width: 40%;
+    height: 3.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
