@@ -1,0 +1,29 @@
+.imgDetail {
+    width: 15rem;
+    height: 18rem;
+    border-radius: 3rem;
+  }
+  h2{
+    color: #003F4A;
+  }
+  #detalle{
+    font-size: 15px;
+    margin-bottom: 2rem;
+  }
+  .button-cart {
+    width: 13rem;
+    height: 5rem;
+    background-color: #0D1D2D;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  h6{
+    padding-top: 2rem;
+    color: #003F4A;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+    

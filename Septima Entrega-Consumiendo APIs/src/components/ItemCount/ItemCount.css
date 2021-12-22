@@ -1,0 +1,35 @@
+#count{
+    margin-left: 1rem;
+}
+#mas,
+#menos{
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+    width: 20px;
+    background-color: #003F4A;
+    border: 1px solid #003F4A;
+}  
+#numero{
+    width: 30px;
+    color: #003F4A;
+    font-size: 12px;
+    background-color: #ffffff;
+    border: 1px solid #003F4A;
+}
+
+#addCart{
+    font-size: 12px;
+    width: 120px;
+    height: 25px;
+    color: #ffffff;
+    margin-top: 1rem;
+    background-color: #003F4A;
+    border: 1px solid #003F4A;
+}
+
+#addCart:hover{
+    color: #003F4A;
+    background-color: #ffffff;
+    border: 1px solid #003F4A;
+}
