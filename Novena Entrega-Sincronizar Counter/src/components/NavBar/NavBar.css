@@ -1,0 +1,59 @@
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+#nav {
+    padding: 0;
+    margin-right: 2rem;
+}
+
+.navbar-nav{
+    margin-left: 75rem;
+}
+
+#brand{
+    margin-left: 4rem;
+}
+
+#link{
+    text-decoration: none;
+    color: #003F4A;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    margin-right: 10rem;
+}
+
+link:hover{
+    color: #007cba;
+}
+
+form{
+    width: 300px;
+    font-size: 12px;
+    margin-left: 10rem;
+    margin-right: 2rem;
+}
+
+form .searchButton{
+    width: 100px;
+}
+
+h3{
+    font-size: calc(10px + 1vmin);
+}
+
+button{
+    color: #ffffff;
+    font-size: 12px;
+    background-color: #003F4A;
+    border: 1px solid #003F4A;
+}
+button:hover{
+    color: #ffffff;
+    background-color: #007cba;
+    border: 1px solid #007cba;
+}
