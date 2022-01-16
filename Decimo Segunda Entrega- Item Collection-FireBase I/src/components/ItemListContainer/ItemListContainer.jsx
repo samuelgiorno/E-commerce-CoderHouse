@@ -1,0 +1,66 @@
+import React, {useState, useEffect} from 'react'
+import ItemList from '../ItemList/ItemList'
+//import { getProductos, getProductosByCategory } from '../../datos/productos'
+import {db} from '../../services/Firebase/Firebase'
+import { collection, getDocs, query, where} from 'firebase/firestore'
+import { useParams } from 'react-router-dom'
+import Loader from '../Loader/Loader'
+
+
+const ItemListContainer = () => {
+
+    const[productos, setProductos] = useState([])
+    const{categoryId} = useParams()
+
+    useEffect(() =>{
+        
+        ( async () => {
+        //setProductos([])
+    
+       // if (categoryId !== undefined){
+           // const listProductByCategory = await getProductosByCategory(categoryId)
+           // setProductos(listProductByCategory)
+           try{
+            setProductos([])
+
+            if (categoryId !== undefined){
+                const getListProductByCategory = await getDocs(query(collection(db, 'productos'), where('categoria', '==', categoryId)))
+
+                const listProductByCategory = getListProductByCategory.docs.map(doc =>{
+                    return { id: doc.id, ...doc.data()}
+                })
+
+                setProductos(listProductByCategory)
+            }
+            else{
+                const getGistProduct = await getDocs(collection(db, 'productos'))
+                const listProduct = getGistProduct.docs.map(doc =>{
+                    return { id: doc.id, ...doc.data()}
+                })
+
+                setProductos(listProduct) 
+            }      
+        } catch{
+            console.log('Error en la consulta a la base de datos');
+        }finally{
+            console.log('Consulta finalizada');
+        
+        }
+        //else{
+            //const listProduct = await getProductos()
+           // setProductos(listProduct)
+        //}       
+        })()
+
+    },[categoryId])
+
+    return (
+        <div className="container">
+            <div className="row justify-content-center">
+                {productos.length !== 0 ?<ItemList productos={productos}/> :<Loader/>}
+            </div>
+        </div>
+    )
+}
+
+export default ItemListContainer
