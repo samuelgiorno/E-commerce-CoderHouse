@@ -1,0 +1,400 @@
+@import '../datos/Scss/Colors.scss';
+@import '../datos/Scss/Fonts.scss';
+
+$rounded: 1px;
+$rounded-btn: 10rem;
+
+.btn:focus-visible{
+    outline: 0;
+    box-shadow: 0;
+}
+
+.btn-check:focus+.btn, 
+.btn:focus {
+    outline: 0;
+    box-shadow: none; 
+}
+
+.logo{
+    width: 10rem;
+}
+
+.navbar-nav{
+    font-size: 1rem;
+    .cartWidget{
+        width: 2rem;
+    }
+}
+
+#goCart{
+    transition: all .2s ease-out;
+    width: 100%;
+    height: 2rem;
+    background-color: $primary-color;
+    color: #FFF;
+}
+
+#viewProduct{
+    color: $text-color;
+    height: 2rem;
+    background-color: $primary-color;
+    transition: all .2s ease-out;
+}
+
+#addCart{
+    color: $text-color;
+}
+
+#goCart:hover,
+#viewProduct:hover,
+#addCart:hover
+{
+    color: $text-color;
+    background-color: $secondary-color;
+}
+
+#cardItemList{
+    width: 12rem;
+    height: 20rem;
+}
+
+.cardButton{
+    color: $primary-color;
+    width: 2rem;
+    height: 2rem;
+    transition: all .1s ease-in-out;
+}
+
+#goCart, #viewProduct, #addCart
+{   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    transition: all .2s ease-out;
+}
+
+ 
+.cardButton:hover{
+    border: 1px solid $primary-color;
+}
+
+.cardItem{
+    padding: .5rem;
+    transition: all 0.3s ease-in-out;
+    .imgCard{
+        width: 100%;
+    }
+    .textCard{
+        h5{
+            font-weight: 400;
+        }
+        h4{
+            font-weight: 500;
+        }
+    } 
+}
+
+.imgItemMin{
+    @extend .cardItem;
+    height: 100%;
+    
+}
+
+.ItemCount{
+    height: 0;
+    transform: scaleY(0);
+    transition: all 0.2s ease-out;
+}
+
+.cardItem:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow:
+    0px 0px 2.1px rgba(0, 0, 0, 0.035),
+    0px 0px 17px rgba(0, 0, 0, 0.07)
+    ;
+    .ItemCount{
+        height: 5rem;
+        transform: scaleY(1);
+    }
+}
+
+.itemDetail{
+    box-shadow:
+    0px 0px 2.1px rgba(0, 0, 0, 0.035),
+    0px 0px 17px rgba(0, 0, 0, 0.07);
+    z-index: 0;
+    img{
+        border-radius: $rounded;
+    }
+}
+
+.App{  
+    display: block;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.App::after{
+    background-color: $background-color;
+    background-repeat: repeat;
+    opacity: 1;
+    overflow: hidden;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.formCheckout{
+    @extend .itemDetail;
+    padding: 1rem;
+}
+
+.formHeader{
+    font-size: 1.3rem;
+}
+.cartDetailText{
+    font-size: .9rem;
+}
+
+.imgCartItem{
+    padding: none;
+    img{
+        padding: 0rem;
+        width: 100%;
+    }
+}
+
+.titleCart{
+    p{
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+.order{
+    text-align: center;
+    justify-content: center;
+    flex-flow: row;
+
+    .orderDetails{
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+        margin-top: 1rem;
+    }
+
+    .descripOrder{
+        margin-top: 2rem;
+    }
+
+    .idOrder{
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    h6{
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .btnGoHome{
+        @extend .checkOut;
+        margin-top: 1rem;
+        width: auto; 
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.2s ease-out;
+    }
+    .btnSecondary{
+        @extend .removeAll;
+        margin-top: 1rem;
+        width: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.titlePage{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    text-transform:capitalize;
+}
+
+.bag{
+    display: flex;
+    flex-flow: row wrap;
+    height: 1rem;
+    p{
+        margin-left: .5rem;
+    }
+}
+
+.imgCart{
+    width: 10rem;
+    height: 10rem;
+    z-index: 1;
+}
+
+.borrar{
+    background-color: $primary-color;
+    color: #FFF;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 1rem;
+    transition: all 0.2s ease-out;
+}
+
+.borrar > *{
+    font-size: 1.3rem;
+}
+
+.checkOut{
+    background-color: $primary-color;
+    border-radius: $rounded;
+    border: none;
+    padding: 0.5rem;
+    width: 10rem;
+    font-size: 1rem;
+    color: #FFF;
+    transition: all 0.2s ease-out;
+}
+
+.removeAll{
+    background-color: $background-color;
+    color: $primary-color;
+    border-radius: $rounded;
+    border: 1px solid $primary-color;
+    padding: 0.5rem;
+    width: 10rem;
+    font-size: 1rem;
+    transition: all 0.2s ease-out;
+}
+
+.removeAllDiv{
+    position: absolute;
+    left: 15%;
+}
+
+.checkOutDiv{
+    position: absolute;
+    right: 15%;
+}
+
+.footerCartBg{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: fixed;
+        height: 5em;
+        bottom: 0rem;
+        background-color: $background-color;              
+}
+
+.footerCart{
+    background-color: $background-color;
+    border-radius: $rounded;
+    height: 4rem;
+    padding: 0.7rem;
+    box-shadow:
+            0px 0px 1.1px rgba(0, 0, 0, 0.013),
+            0px 0px 2.9px rgba(0, 0, 0, 0.02),
+            0px 0px 5.8px rgba(0, 0, 0, 0.025),
+            0px 0px 12px rgba(0, 0, 0, 0.031),
+            0px 0px 33px rgba(0, 0, 0, 0.04);
+}
+
+.cart{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.CountButtonCart{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.bg_home{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    img{
+        width: 100%;
+  
+    }
+    .bg_cta{
+        display: flex;
+        position: absolute;
+        flex-flow: column;
+        top:20%;
+        left: 10%;
+        width: 35rem;
+        padding: 0;
+        align-items: center;
+
+        .btn_cta{
+            @extend .checkOut;
+            margin-top: 2rem;
+            margin-left: -18rem;
+            font-size: 1.5rem;
+            width: auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            color: #000000;
+            background-color: $background-color;
+        }
+        .btn_cta span{
+            font-family: $font-button;
+        }
+
+        .title{
+            font-weight:bold;
+            font-family: $font-primary;
+            letter-spacing: 0.2rem;
+            font-style: normal;
+            color: $text-color;
+            text-shadow:1px 1px #000;
+            clear:both;
+            font-size: 4rem;
+            margin-bottom:10px;
+            text-shadow:none;
+        }
+        .summary{
+            font-family: $font-primary;
+            letter-spacing: 0.01rem;
+            font-weight: 100;
+            color: $text-color;
+            clear:both;
+            font-size: 1.5rem;
+            margin-bottom:10px;
+            text-shadow:none;
+        }
+    }
+    .bg_cta button:hover{
+        background-color:$boton-home;
+    }
+}
